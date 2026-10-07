@@ -10,18 +10,41 @@ public class NewMonoBehaviourScript : MonoBehaviour
         Debug.Log(a);
         // Debug.Log("hello World");
 
-        //bool a = true;
-        //bool b = false;
-        //gameObject.SetActive(a || b);
-        //Vector2 newPos = transform.position;
-        newPos.x = newPos.x + 5;
-        transform
+     void Start()
+            int a = 1; 
+        switcj(a < 5)
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
+        using UnityEngine;
+
+public class PlayerMove : MonoBehaviour
+    {
+        void Update()
+        {
+            if (Input.GetKey(KeyCode.W))
+            {
+                this.transform.Translate(0, 1, 0);
+            }
+
+            if (Input.GetKey(KeyCode.S))
+            {
+                this.transform.Translate(0, -1, 0);
+            }
+
+            if (Input.GetKey(KeyCode.A))
+            {
+                this.transform.Translate(-1, 0, 0);
+            }
+
+            if (Input.GetKey(KeyCode.D))
+            {
+                this.transform.Translate(1, 0, 0);
+            }
+        }
+    }
         {
             this.transform.Translate(0,1,0);
         }
